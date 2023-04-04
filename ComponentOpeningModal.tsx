@@ -5,7 +5,11 @@ export default function ComponentOpeningModal() {
 
   return (
     <button
-      onClick={() => showModal((onClose) => <SomeModal onClose={onClose} />)}
+      onClick={() =>
+        showModal((onClose) => (
+          <SomeModal onClose={onClose} someModalSpecificProp={someProp} />
+        ))
+      }
     >
       Open modal
     </button>
